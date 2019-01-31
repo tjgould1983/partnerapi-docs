@@ -170,7 +170,16 @@ tags:
     x-displayName: Order Delivery Webhooks
   - name: delivery-pools-api
     x-displayName: Delivery Pools API
+  - name: search-api
+    x-displayName: Search API
 x-tagGroups:
+  - name: Whitelabel
+    tags:
+      - search-api
+      - order-api
+      - order-webhooks
+      - order-acceptance-api
+      - order-acceptance-webhooks
   - name: Delivery Pools
     tags:
       - delivery-pools-api
