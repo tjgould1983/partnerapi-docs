@@ -1,0 +1,21 @@
+post:
+  tags:
+  - order-api
+  summary: "Create order (v2)"
+  parameters:
+  - name: X-JE-ApiVersion
+    in: header
+    required: false
+    schema:
+      type: integer
+    example:
+      X-JE-ApiVersion: 2.0
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          "$ref": "#/definitions/order-request-v2"
+  responses:
+    '201':
+      description: Created

@@ -1,0 +1,14 @@
+type: object
+properties:
+  Method:
+    type: string
+    example:
+      Method: Delivery|Collection
+  DueDate:
+    type: string
+    format: date-time
+  DueAsap:
+    type: boolean
+
+
+

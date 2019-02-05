@@ -1,0 +1,7 @@
+type: object
+properties:
+  Id:
+    type: integer
+  Reference:
+    type: string
+    description: Either Id or Reference MUST be set

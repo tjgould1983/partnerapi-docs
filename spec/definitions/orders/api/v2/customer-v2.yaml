@@ -1,0 +1,12 @@
+type: object
+properties:
+  Name:
+    type: string
+  PhoneNumber:
+    type: string    
+  Address:
+    "$ref": "#/definitions/address-v2"
+required:
+- Name
+- PhoneNumber
+- Address

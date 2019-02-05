@@ -1,0 +1,23 @@
+type: object
+properties:
+  TotalPrice:
+    format: money
+    type: number
+  Reference:
+    type: string
+  Name:
+    type: string    
+  Quantity:
+    type: integer
+  UnitPrice:
+    format: double
+    type: integer    
+  Items:
+    type: array
+    items: 
+      "$ref": "#/definitions/item-v2"  
+required:
+  - Reference
+  - Name
+  - Quantity
+  - UnitPrice

@@ -1,7 +1,7 @@
 post:
   tags:
   - order-api
-  summary: "Create order"
+  summary: "Create order (v1)"
   requestBody:
     required: true
     content:

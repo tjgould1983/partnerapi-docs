@@ -1,0 +1,20 @@
+type: object
+properties:
+  Type:
+    type: string
+    example:
+      Type: Cash|Card|AccountCredit|Voucher
+  Value:
+    format: money
+    type: number    
+  Paid:
+    type: boolean
+  LastCardDigits:
+    type: string    
+  ServiceFee:
+    format: double
+    type: integer
+required:
+  - Type
+  - Value
+  - Paid

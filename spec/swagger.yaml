@@ -183,14 +183,6 @@ x-tagGroups:
   - name: Delivery Pools
     tags:
       - delivery-pools-api
-  - name: Order Acceptance
-    tags:
-      - order-acceptance-api
-      - order-acceptance-webhooks
-  - name: Orders
-    tags:
-      - order-api
-      - order-webhooks
   - name: Order Delivery
     tags:
       - order-delivery-api

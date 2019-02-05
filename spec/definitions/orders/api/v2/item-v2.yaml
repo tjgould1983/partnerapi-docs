@@ -1,0 +1,16 @@
+type: object
+properties:
+  Reference:
+    type: string
+  Name:
+    type: string    
+  Quantity:
+    type: integer
+  UnitPrice:
+    format: double
+    type: integer    
+required:
+  - Reference
+  - Name
+  - Quantity
+  - UnitPrice

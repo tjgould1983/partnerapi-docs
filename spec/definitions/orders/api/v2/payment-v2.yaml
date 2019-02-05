@@ -1,0 +1,21 @@
+type: object
+properties:
+  PaidDate:
+    type: string
+    format: date-time
+  Tips:
+    type: array
+    items: 
+      "$ref": "#/definitions/fee"
+  Fees:
+    type: array
+    items: 
+      "$ref": "#/definitions/fee"
+  Taxes:
+    type: array
+    items: 
+      "$ref": "#/definitions/tax-v2" 
+  Lines:
+    type: array
+    items: 
+      "$ref": "#/definitions/lines-v2" 
