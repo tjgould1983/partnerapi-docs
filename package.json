@@ -8,6 +8,7 @@
     "cors": "^2.7.1",
     "deep-extend": "^0.6.0",
     "deploy-to-gh-pages": "^1.1.0",
+    "extend": ">=3.0.2",
     "fresh": "^0.5.2",
     "gulp": "^3.9.1",
     "gulp-connect": "^4.2.0",
