@@ -8,7 +8,7 @@ properties:
     type: string
   PostalCode:
     type: string
-  Geolocation:
+  GeoLocation:
     "$ref": "#/definitions/location-v2"
 required:
 - AddressLines

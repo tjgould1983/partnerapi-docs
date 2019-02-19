@@ -6,11 +6,14 @@ properties:
     type: string
   CustomerNotes:
     type: object
+    properties:
+      NoteForRestaurant: string
+      NoteForDelivery: string
     additionalProperties:
-      type: string
+      key: string
     example:
-      NoteForRestaurant: "Note for Restaurant"
-      NoteForDelivery: "Note for Delivery Driver"
+      NoteForRestaurant: "Make it spicy"
+      NoteForDelivery: "Red door"
   IsTest:
     type: boolean
   TotalPrice:
@@ -20,8 +23,8 @@ properties:
     "$ref": "#/definitions/restaurant-v2"
   Customer:
     "$ref": "#/definitions/customer-v2"   
-  Fulfillment:
-    "$ref": "#/definitions/fulfillment-v2"
+  Fulfilment:
+    "$ref": "#/definitions/fulfilment-v2"
   Payment:
     "$ref": "#/definitions/payment-v2"
   Items:
@@ -31,6 +34,8 @@ properties:
 required:
   - OrderReference
   - TotalPrice
+  - Restaurant
   - Customer
-  - Fulfillment
+  - Fulfilment
+  - Payment
   - Items

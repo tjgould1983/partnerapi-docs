@@ -7,10 +7,9 @@ properties:
   Quantity:
     type: integer
   UnitPrice:
-    format: double
-    type: integer    
-required:
-  - Reference
-  - Name
-  - Quantity
-  - UnitPrice
+    format: money
+    type: integer
+  Items:
+    type: array
+    items: 
+      "$ref": "#/definitions/item-v2"

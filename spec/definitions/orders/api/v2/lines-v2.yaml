@@ -2,8 +2,11 @@ type: object
 properties:
   Type:
     type: string
-    example:
-      Type: Cash|Card|AccountCredit|Voucher
+    enum:
+      - Cash
+      - Card
+      - AccountCredit
+      - Voucher
   Value:
     format: money
     type: number    
@@ -16,5 +19,3 @@ properties:
     type: integer
 required:
   - Type
-  - Value
-  - Paid
