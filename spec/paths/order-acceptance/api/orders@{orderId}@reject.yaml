@@ -2,6 +2,7 @@ put:
   tags:
   - order-acceptance-api
   summary: "Reject order"
+  description: Call when an order has been rejected. An order can only be rejected if it hasn't previously been accepted, rejected or cancelled
   parameters:
     - name: orderId
       in: path
@@ -17,5 +18,7 @@ put:
   responses:
     '200':
       description: OK
+    '404':
+      description: Order could not be found
     '409':
       description: Conflict. This order has either already been accepted, rejected by restaurant or cancelled by ops
