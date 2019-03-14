@@ -53,6 +53,10 @@ properties:
         type: string
         format: date-time
         description: When the Customer was originally told the order would be delivered (prior to Restaurant adjustment)
+      PickupNoticePeriod: 
+        type: string
+        format: timespan
+        description: Desired minimum amount of notice needed before the driver arrives to pickup the order at the restaurant. This is to allow restaurant enough time to prepare the order. If less notice is given the driver may have to wait for the order to be prepared. Field is in the format "hh:mm:ss"
       PromptAsap: 
         type: boolean
         description: Did the Customer request the Order to ready ASAP
