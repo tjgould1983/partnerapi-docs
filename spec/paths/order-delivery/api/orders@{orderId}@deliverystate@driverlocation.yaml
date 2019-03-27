@@ -14,7 +14,7 @@ put:
     content:
       application/json:
         schema:
-          "$ref": "#/definitions/delivery-driver-details-with-eta"
+          "$ref": "#/definitions/delivery-driver-location"
   responses:
     '200':
       description: OK
