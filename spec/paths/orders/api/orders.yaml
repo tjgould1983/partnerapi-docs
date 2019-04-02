@@ -1,7 +1,7 @@
 post:
   tags:
   - order-api
-  summary: "Create order (v2)"
+  summary: "Create order"
   parameters:
   - name: x-je-api-version
     in: header

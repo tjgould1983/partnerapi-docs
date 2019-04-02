@@ -16,3 +16,5 @@ properties:
   Event:
     type: string
     enum: [DriverAssigned, DriverAtRestaurant, OnItsWay, AtDeliveryAddress, Delivered]
+  OrderId: 
+    type: string
