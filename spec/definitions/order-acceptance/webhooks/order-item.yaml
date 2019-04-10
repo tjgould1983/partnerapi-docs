@@ -4,17 +4,15 @@ items:
   properties:
     Reference:
       type: string
-    OptionReference:
-      type: string
-    Description:
+    Name:
       type: string
     Quantity:
-      type: string
+      type: number
     UnitPrice:
       format: money
-      type: string
+      type: number
     TotalPrice:
       format: money
-      type: string
+      type: number
     Items:
       "$ref": "#/definitions/order-item"
