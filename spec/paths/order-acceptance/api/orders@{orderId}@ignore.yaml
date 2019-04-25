@@ -1,20 +1,14 @@
 put:
   tags:
   - order-acceptance-api
-  summary: "Reject order"
-  description: Call when an order has been rejected. An order can only be rejected if it hasn't previously been accepted, rejected, cancelled or ignored
+  summary: "Ignore order"
+  description: Call when an order has been ignored by restaurant. An order can only be ignored if it hasn't previously been accepted, rejected, cancelled or ignored
   parameters:
     - name: orderId
       in: path
       required: true
       schema:
         type: string
-  requestBody:
-    required: true
-    content:
-      application/json:
-        schema:
-          $ref: '#/definitions/order-reject-request'
   responses:
     '200':
       description: OK
