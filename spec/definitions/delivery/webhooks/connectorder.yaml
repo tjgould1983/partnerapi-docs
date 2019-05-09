@@ -1,19 +1,29 @@
 type: object
 properties:
+  OrderId: 
+    type: string
+    description:  Globally unique Identifier for the order. Please use this whenever sending requests related to this order. Just Eat will provide this same identifier on any further messages relating to this order.
+    example: ijdhpy7bdusgtc28bapspa
+  FriendlyOrderReference: 
+    type: string
+    description:  The customer facing identifier for the order, which should be used in any UI or receipts to identify the order to the customer, driver or restaurant. This identifier is not guaranteed to be globally unique.
+    example: 348322088
   Id: 
     type: string
-    description: Id is the unique ID that Just Eat has assigned to each order. Please use this ID whenever sending requests related to the order.
+    deprecated: true
+    description: The unique identifier for an order within the country. You can provide this ID whenever sending requests related to the order. Note that further messages from Just Eat relating to this order may not use this same identifier, use OrderId for a more consistent identifier.
+    example: 348322088
   CustomerOrderId: 
     format: int32
     type: number
     deprecated: true
     description: This is a deprecated customer-facing ID that we maintain to support existing implementations.
-  FriendlyOrderReference: 
-    type: string
-    description:  This is the customer-facing ID for the order, which should be used in any UI or receipts to identify the order to the customer, driver or restaurant.
+    example: 348322088
   OrderReference: 
     type: string
-    description: This field is used to store external references to the order.
+    deprecated: true
+    description: This field is used to store external references to the order. This is defined by either Just Eat or the partner that created the order.
+    example: 39cce3f0-0278-dd25-ae32-e8effe1ce4eb
   IsAMiniFistPumpOrder:
     type: boolean
     deprecated: true
