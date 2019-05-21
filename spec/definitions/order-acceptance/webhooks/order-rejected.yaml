@@ -1,0 +1,16 @@
+type: object
+properties:
+  RejectedAt:
+    format: date-time
+    type: string
+  RejectedBy:
+    type: string
+  RejectedReason:
+    type: string
+  Event: 
+    type: string
+example:
+  RejectedAt: '2018-03-10T14:45:28Z'
+  RejectedBy: '123456'
+  RejectedReason: 'Kitchen overloaded'
+  Event: 'OrderRejected'
