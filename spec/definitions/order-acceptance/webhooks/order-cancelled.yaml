@@ -5,5 +5,5 @@ properties:
   Event: 
     type: string
 example:
-  OrderId: '123456'
+  OrderId: 'ijdhpy7bdusgtc28bapspa'
   Event: 'OrderCancelled'
