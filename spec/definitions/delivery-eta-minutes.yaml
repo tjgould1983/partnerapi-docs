@@ -1,0 +1,21 @@
+type: object
+properties:
+  Approximate:
+    format: int32
+    type: integer    
+    nullable: true
+    description: Approximate delivery eta in minutes
+  RangeLower:
+    format: int32
+    type: integer
+    nullable: true
+    description: Lower bound of delivery eta in minutes
+  RangeUpper:
+    format: int32
+    type: integer
+    nullable: true
+    description: Upper bound of delivery eta in minutes
+example:
+  Approximate: null
+  RangeLower: 35
+  RangeUpper: 50

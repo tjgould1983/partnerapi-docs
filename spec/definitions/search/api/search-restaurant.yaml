@@ -8,7 +8,7 @@ properties:
   UniqueName:
     type: string
   Address:
-      "$ref": "#/definitions/search-address"
+    "$ref": "#/definitions/search-address"
   Url:
     type: string
   IsOpenNowForDelivery:
@@ -17,5 +17,7 @@ properties:
     format: double
     type: number
   DriveInfoCalculated:
-    type: bool    
+    type: bool
+  DeliveryEtaMinutes:
+    "$ref": "#/definitions/delivery-eta-minutes" 
     
