@@ -1,5 +1,9 @@
 openapi: 3.0.0
-servers:
+servers:  
+  - url: 'https://uk.api.just-eat.io'
+    description: UK production
+  - url: 'https://i18n.api.just-eat.io'
+    description: International production          
   - url: 'https://{country}-partnerapi.just-eat.io'
     description: live / production
     variables:
@@ -51,7 +55,7 @@ info:
 
     All api calls and callbacks require HTTPS. Your service will need a valid
     SSL certificate and be accesible via the standard SSL port (port 443).
-
+    
     ## Making an API request
 
     ```
@@ -172,6 +176,8 @@ tags:
     x-displayName: Delivery Pools API
   - name: search-api
     x-displayName: Search API
+  - name: logistics-pos-restaurants
+    x-displayName: Restaurant API
 x-tagGroups:
   - name: Whitelabel
     tags:
@@ -191,3 +197,6 @@ x-tagGroups:
     tags:
       - restaurant-api
       - restaurant-webhooks
+  - name: Logistics POS
+    tags:
+      - logistics-pos-restaurants

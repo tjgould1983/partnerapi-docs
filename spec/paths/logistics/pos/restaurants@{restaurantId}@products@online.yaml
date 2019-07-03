@@ -1,0 +1,39 @@
+post:
+  tags:
+    - logistics-pos-restaurants
+  summary: Set product(s) online
+  description: Webhook for setting product(s) online when given partner product(s) has been set `in stock` in given restaurant
+  parameters:
+    - name: restaurantId
+      description: Just Eat restaurant identifier
+      in: path
+      required: true
+      schema:
+        type: integer
+    - name: X-JE-TENANT
+      description: Tenant (Country). Required when triggering international domain
+      in: header
+      schema:
+        $ref: '#/definitions/tenants'
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: array
+          items:
+            type: string
+            description: Array of partner product identifiers
+  responses:
+    202:
+      description: Accepted
+      content:
+        application/json:
+          schema:
+            $ref: '#/definitions/availability-result'        
+    400:
+      description: Bad Request
+      content:
+        application/json:
+          schema:
+            $ref: '#/definitions/availability-result-error'

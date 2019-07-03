@@ -1,0 +1,15 @@
+type: object
+properties:
+  processedPartnerProductIds:
+    type: array
+    description: Array of partner product identifiers that have been successfully processed
+    items:
+      type: string
+  unprocessedPartnerProductIds:
+    type: array
+    description: Array of partner product identifiers that have not been processed
+    items:
+      type: string      
+  message:
+    type: string
+    description: Error description when something went wrong or `unprocessedPartnerProductIds` any

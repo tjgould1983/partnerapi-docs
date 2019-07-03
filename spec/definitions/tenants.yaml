@@ -1,0 +1,10 @@
+type: string
+enum:
+  - au
+  - ca
+  - dk
+  - es
+  - ie
+  - it
+  - nz
+  - uk
