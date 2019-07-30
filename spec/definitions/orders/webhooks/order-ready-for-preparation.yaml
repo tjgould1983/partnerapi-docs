@@ -152,22 +152,27 @@ example:
     Name: 'Bruce Wayne'
   Items:
     - Reference: '1234'
+      Name: 'Chicken Box Meal'
+      Synonym: ''
       Quantity: 2
       UnitPrice: 5.00
       TotalPrice: 10.00
       Items:
         - Reference: '9876'
-          Description: 'Fries'
+          Name: 'Fries'
+          Synonym: 'Regular'
           Quantity: 1
           UnitPrice: 0.00
           Items: []
         - Reference: '6789'
-          Description: 'Still Water'
+          Name: 'Pepsi'
+          Synonym: '330ml'
           Quantity: 2
           UnitPrice: 0.00
           Items: []
     - Reference: '4321'
-      Description: 'Regular Burger'
+      Name: 'Milkshake'
+      Synonym: ''
       Quantity: 1
       UnitPrice: 7.25
       TotalPrice: 7.25
