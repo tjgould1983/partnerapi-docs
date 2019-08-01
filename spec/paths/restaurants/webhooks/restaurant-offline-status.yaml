@@ -1,0 +1,44 @@
+post:
+  tags:
+  - restaurant-webhooks
+  summary: Restaurant Offline Status Change
+  description: ""
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            Event:
+              type: string
+              format: enum
+              enum: [RestaurantOfflineStatus]
+            RestaurantReference:
+              type: string
+              description: The JUST EAT Restaurant Id
+            RestaurantOfflineStatus:
+              type: object
+              properties:
+                IsOffline: 
+                  type: boolean
+                Categories:   
+                  type: array
+                  description: indicator of reason(s) why restauant might be offline
+                  items: 
+                    type: string
+                AllowRestaurantOverride:
+                  type: boolean
+                  description: whether a restaurant would be able to successfully make a request to bring itself online     
+        examples:
+          response:
+            value:
+              Event: RestaurantStatusChange
+              RestaurantOfflineStatus:
+                IsOffline: true
+                Categories: [ "deviceConnection"]
+                AllowRestaurantOverride: false
+              RestaurantReference: 123abc
+  responses:
+    '200':
+      description: OK
