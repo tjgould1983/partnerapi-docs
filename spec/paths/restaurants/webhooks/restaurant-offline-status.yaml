@@ -24,7 +24,7 @@ post:
                   type: boolean
                 Categories:   
                   type: array
-                  description: indicator of reason(s) why restauant might be offline
+                  description: indicator of reason(s) as to why the restaurant might be offline
                   items: 
                     type: string
                 AllowRestaurantOverride:
