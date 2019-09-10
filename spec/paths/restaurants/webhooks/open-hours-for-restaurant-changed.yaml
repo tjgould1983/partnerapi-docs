@@ -36,6 +36,9 @@ post:
                   Closed:
                     type: boolean
                     description: The restaurant is closed for the day
+            Tenant:
+              type: string
+              description: The country the restaurant exists in
   responses:
     '200':
       description: OK

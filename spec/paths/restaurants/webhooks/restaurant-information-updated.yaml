@@ -1,0 +1,124 @@
+post:
+  tags:
+  - restaurant-webhooks
+  summary: Restaurant Information Updated
+  description: "Basic restaurant information; published when any data field in model is changed"
+  requestBody:
+    required: true
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            event:
+              type: string
+              format: enum
+              enum: [RestaurantInformationUpdated]
+            RestaurantInformationUpdated:
+              type: object
+              properties:
+                RestaurantId: 
+                  type: string
+                  description: The JUST EAT Restaurant Id
+                Tenant:
+                    type: string
+                    description: The country the restaurant exists in
+                RestaurantInfo:
+                    type: object
+                    properties:
+                      id:
+                        type: integer
+                      name:
+                        type: string
+                      brandName:
+                        type: string
+                      seoName:
+                        type: string
+                      address:
+                        type: object
+                        properties:
+                          firstLine:
+                            type: string
+                          city:
+                            type: string
+                          postcode:
+                            type: string
+                          location:
+                            type: object
+                            properties: 
+                              lat:
+                                type: double
+                              lng:
+                                type: double
+                      phoneNumber:
+                        type: string
+                      allergenPhoneNumber:
+                        type: string
+                      allergenUrl:
+                        type: string
+                      mobileNumber:
+                        type: string
+                      email:
+                        type: string
+                      ownerName: 
+                        type: string
+                      alternativeOwnerName:
+                        type: string
+                      alternativeOwnerNumber:
+                        type: string
+                      legalName:
+                        type: strigng
+                      companyNo:
+                        type: string
+                      logoUrl:
+                        type: string
+                      openingClosingTimes:
+                        type: object
+                        properties:
+                          mondayClosed:
+                            type: boolean
+                          tuesdayClosed:
+                            type: boolean
+                          wednesdayClosed:
+                            type: boolean
+                          thursdayClosed:
+                            type: boolean
+                          fridayClosed:
+                            type: boolean
+                          saturdayClosed:
+                            type: boolean
+                          sundayClosed:
+                            type: boolean
+                          mondayOpeningTimeOfDay:
+                            type: string
+                          tuesdayOpeningTimeOfDay:
+                            type: string
+                          wednesdayOpeningTimeOfDay:
+                            type: string
+                          thursdayOpeningTimeOfDay:
+                            type: string
+                          fridayOpeningTimeOfDay:
+                            type: string
+                          saturdayOpeningTimeOfDay:
+                            type: string
+                          sundayOpeningTimeOfDay:
+                            type: string
+                          mondayClosingTimeOfDay:
+                            type: string
+                          tuesdayClosingTimeOfDay:
+                            type: string
+                          wednesdayClosingTimeOfDay:
+                            type: string
+                          thursdayClosingTimeOfDay:
+                            type: string
+                          fridayClosingTimeOfDay:
+                            type: string
+                          saturdayClosingTimeOfDay:
+                            type: string
+                          sundayClosingTimeOfDay:
+                            type: string                           
+                      signupReference:
+                        type: string
+  responses:
+    '200':
+      description: OK

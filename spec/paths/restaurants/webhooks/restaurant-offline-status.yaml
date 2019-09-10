@@ -29,7 +29,13 @@ post:
                     type: string
                 AllowRestaurantOverride:
                   type: boolean
-                  description: whether a restaurant would be able to successfully make a request to bring itself online     
+                  description: whether a restaurant would be able to successfully make a request to bring itself online
+                Tenant:
+                  type: string
+                  description: The country the restaurant exists in
+                RestaurantId:
+                  type: string
+                  description: The JUST EAT Restaurant Id
         examples:
           response:
             value:
@@ -38,6 +44,8 @@ post:
                 IsOffline: true
                 Categories: [ "deviceConnection"]
                 AllowRestaurantOverride: false
+                Tenant: "uk"
+                RestaurantId: 1234
               RestaurantReference: 123abc
   responses:
     '200':

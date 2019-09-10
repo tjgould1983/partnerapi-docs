@@ -2,7 +2,7 @@ post:
   tags:
   - restaurant-webhooks
   summary: Restaurant Details Updated
-  description: ""
+  description: "Basic restaurant information; published when a restaurant is first associated to a 3rd party that maintains a relationship with Just Eat"
   requestBody:
     required: true
     content:
@@ -37,6 +37,9 @@ post:
                   longitude:
                     type: number
                     format: float
+            tenant:
+              type: string
+              description: The country the restaurant(s) exists in
   responses:
     '200':
       description: OK
